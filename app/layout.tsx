@@ -31,17 +31,15 @@ export default function RootLayout({
             </Link>
           ))}
         </nav>
-        <p className="text-center text-gray-500 mb-8">
-          This is a demo of AI-generated summaries of customer reviews. To learn
-          more, see the{" "}
+        <p className="text-center text-gray-500 mx-auto max-w-2xl">
+          A Next.js project that generates multiple fake reviews based on custom parameters such as product name, description, tone, keywords, and review length. This project utilizes the Groq API with Llama 3.1 8b instant to create realistic reviews.{" "}
           <Link
             className="underline"
             target="_blank"
-            href="https://vercel.com/templates/next.js/customer-reviews-ai-summary-nextjs-vercel"
+            href="hhttps://github.com/johnumarattilbb/ai-review-gen"
           >
-            complete template
+            Link to project
           </Link>
-          .{"\n          "}
         </p>
         <main className="pt-6">{children}</main>
       </body>

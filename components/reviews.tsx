@@ -1,14 +1,21 @@
+"use client"
+
+import { useState } from 'react';
 import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar";
 import { Product, Review as ReviewType } from "@/lib/types";
 import ms from "ms";
 import { FiveStarRating } from "./five-star-rating";
 import { AIReviewSummary } from "./ai-review-summary";
+export function Reviews({ product }: { product: Product }) {
+  const [reviews, setReviews] = useState(product.reviews);
+  const handleNewReviews = (newReviews: ReviewType[]) => {
+    setReviews(newReviews);
+  };
 
-export async function Reviews({ product }: { product: Product }) {
   return (
     <div className="mx-auto px-4 md:px-6 max-w-2xl grid gap-12">
-      <AIReviewSummary product={product} />
-      {product.reviews.map((review) => (
+      <AIReviewSummary product={product} onNewReviews={handleNewReviews} />
+      {reviews.map((review) => (
         <div key={review.review}>
           <Review key={review.review} review={review} />
         </div>
