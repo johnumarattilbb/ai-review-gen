@@ -36,7 +36,7 @@ export default function RootLayout({
           <Link
             className="underline"
             target="_blank"
-            href="hhttps://github.com/johnumarattilbb/ai-review-gen"
+            href="https://github.com/johnumarattilbb/ai-review-gen"
           >
             Link to project
           </Link>
